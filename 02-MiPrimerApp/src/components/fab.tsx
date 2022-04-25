@@ -20,7 +20,7 @@ export const Fab = ({title, onPress, position}: Props) => {
           >
           <TouchableOpacity
           style={[
-            styles.fabLocation,
+            styles.fabLocationIos,
             position === 'br' ? styles.buttonRight : styles.buttonLeft,
           ]}
             onPress={onPress}>
@@ -55,6 +55,10 @@ export const Fab = ({title, onPress, position}: Props) => {
 };
 
 const styles = StyleSheet.create({
+  fabLocationIos: {
+    position: 'absolute',
+    bottom: -350,
+  },
   fabLocation: {
     position: 'absolute',
     bottom: 0,
